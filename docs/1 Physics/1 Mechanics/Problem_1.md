@@ -110,4 +110,5 @@ In summary:
 - A higher initial velocity increases the range.
 - A lower gravitational acceleration increases the range.
 
+
 ![alt text](image-2.png)
