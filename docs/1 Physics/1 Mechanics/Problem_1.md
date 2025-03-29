@@ -58,4 +58,56 @@ As the angle \( \theta \) changes, the range of the projectile also changes. The
 
 Thus, the range is a function of the launch angle \( \theta \), initial velocity \( v_0 \), and gravity \( g \). Variations in any of these initial conditions lead to a family of solutions for the range, allowing us to analyze how changes in conditions affect projectile motion.
 
-![alt text](image-1.png)
+![alt text](image-1.png) 
+
+## Analysis of the Range:
+
+# Investigating the Range as a Function of the Angle of Projection
+
+## Analysis of the Range
+
+### Dependence of Range on the Angle of Projection
+
+From the previous derivation, we know the range \( R \) of the projectile is given by the equation:
+
+$$ R = \frac{v_0^2 \sin(2\theta)}{g} $$
+
+Where:
+- \( v_0 \) is the initial velocity
+- \( \theta \) is the angle of projection
+- \( g \) is the acceleration due to gravity
+
+We can analyze the behavior of the range as a function of the angle of projection \( \theta \).
+
+The term \( \sin(2\theta) \) in the range equation indicates that the range varies as a sinusoidal function of \( 2\theta \). The sine function reaches its maximum value of 1 when \( 2\theta = 90^\circ \), i.e., when \( \theta = 45^\circ \). Therefore, the maximum horizontal range is achieved when the angle of projection is \( 45^\circ \).
+
+The relationship between the range and the angle of projection is symmetric. For angles greater than \( 45^\circ \), the range decreases as the sine function decreases after reaching its maximum. For angles less than \( 45^\circ \), the range also decreases as the angle moves further away from \( 45^\circ \).
+
+Thus, the range is maximized when \( \theta = 45^\circ \), and for other angles, the range decreases symmetrically on either side of this optimal angle.
+
+### Influence of Initial Velocity
+
+The range \( R \) is directly proportional to the square of the initial velocity \( v_0 \):
+
+$$ R \propto v_0^2 $$
+
+This means that if the initial velocity \( v_0 \) is increased, the range of the projectile increases as well. For example, doubling the initial velocity would quadruple the range, assuming the angle of projection and gravitational acceleration remain constant.
+
+### Influence of Gravitational Acceleration
+
+The range \( R \) is inversely proportional to the acceleration due to gravity \( g \):
+
+$$ R \propto \frac{1}{g} $$
+
+This means that in regions with lower gravitational acceleration (e.g., on the Moon compared to Earth), the range of the projectile would be greater. If the gravitational acceleration \( g \) is decreased, the range increases, assuming all other factors remain constant.
+
+### Combined Effect of Parameters
+
+The horizontal range depends on the combined effects of the initial velocity, the angle of projection, and gravitational acceleration. The optimal angle for the maximum range is \( 45^\circ \), but the exact range achieved also depends on how large the initial velocity \( v_0 \) is and how small the gravitational acceleration \( g \) is. 
+
+In summary:
+- The range is maximized at \( \theta = 45^\circ \).
+- A higher initial velocity increases the range.
+- A lower gravitational acceleration increases the range.
+
+![alt text](image-2.png)
