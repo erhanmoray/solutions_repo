@@ -188,6 +188,26 @@ Where:
 
 The angle \( \theta \) is a key variable affecting the range. The range is maximized when the angle is \( 45^\circ \).
 
+# Investigating the Range as a Function of the Angle of Projection
+
+## Theoretical Foundation
+
+Projectile motion is the motion of an object thrown into the air with an initial velocity, affected only by the forces of gravity and air resistance. The range of a projectile depends on various factors, most notably the angle of projection, initial velocity, and gravitational acceleration.
+
+The horizontal range \( R \) of a projectile launched from the ground level is given by the equation:
+
+$$
+R = \frac{v_0^2 \sin(2\theta)}{g}
+$$
+
+Where:
+- \( R \) = Range of the projectile (horizontal distance traveled).
+- \( v_0 \) = Initial velocity.
+- \( \theta \) = Angle of projection with the horizontal.
+- \( g \) = Gravitational acceleration (approximately \( 9.81 \, \text{m/s}^2 \)).
+
+The angle \( \theta \) is a key variable affecting the range. The range is maximized when the angle is \( 45^\circ \).
+
 ## Implementation
 
 To simulate the projectile motion and visualize the range as a function of the angle of projection, we can use a computational tool that solves the equations of motion under different initial conditions.
@@ -253,13 +273,6 @@ def compute_range(v_0, angle, g):
 # Compute the range for different angles
 ranges = [compute_range(v_0, angle, g) for angle in angles]
 
-# Plotting the range as a function of angle
-plt.figure(figsize=(8, 6))
-plt.plot(angles, ranges, label='Range vs Angle', color='b')
-plt.title('Projectile Range as a Function of Launch Angle', fontsize=14)
-plt.xlabel('Launch Angle (degrees)', fontsize=12)
-plt.ylabel('Range (m)', fontsize=12)
-plt.grid(True)
-plt.legend()
-plt.show()
+
+
 
