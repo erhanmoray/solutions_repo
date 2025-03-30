@@ -297,6 +297,19 @@ R = \frac{v_0^2 \sin(2\theta)}{g}
 - <span class="arithmatex">\( \theta \)</span> = Angle of projection with the horizontal.
 - <span class="arithmatex">\( g \)</span> = Gravitational acceleration (approximately <span class="arithmatex">\( 9.81 \, \text{m/s}^2 \)</span>).</p>
 <p>The angle <span class="arithmatex">\( \theta \)</span> is a key variable affecting the range. The range is maximized when the angle is <span class="arithmatex">\( 45^\circ \)</span>.</p>
+<h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection_3">Investigating the Range as a Function of the Angle of Projection</h1>
+<h2 id="theoretical-foundation_2">Theoretical Foundation</h2>
+<p>Projectile motion is the motion of an object thrown into the air with an initial velocity, affected only by the forces of gravity and air resistance. The range of a projectile depends on various factors, most notably the angle of projection, initial velocity, and gravitational acceleration.</p>
+<p>The horizontal range <span class="arithmatex">\( R \)</span> of a projectile launched from the ground level is given by the equation:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( R \)</span> = Range of the projectile (horizontal distance traveled).
+- <span class="arithmatex">\( v_0 \)</span> = Initial velocity.
+- <span class="arithmatex">\( \theta \)</span> = Angle of projection with the horizontal.
+- <span class="arithmatex">\( g \)</span> = Gravitational acceleration (approximately <span class="arithmatex">\( 9.81 \, \text{m/s}^2 \)</span>).</p>
+<p>The angle <span class="arithmatex">\( \theta \)</span> is a key variable affecting the range. The range is maximized when the angle is <span class="arithmatex">\( 45^\circ \)</span>.</p>
 <h2 id="implementation">Implementation</h2>
 <p>To simulate the projectile motion and visualize the range as a function of the angle of projection, we can use a computational tool that solves the equations of motion under different initial conditions.</p>
 <h3 id="steps-for-implementation">Steps for Implementation:</h3>
@@ -361,15 +374,6 @@ angles = np.linspace(0, 90, 100)  # angles from 0 to 90 degrees</p>
     return (v_0*<em>2 * np.sin(2</em>angle_rad)) / g</p>
 <h1 id="compute-the-range-for-different-angles">Compute the range for different angles</h1>
 <p>ranges = [compute_range(v_0, angle, g) for angle in angles]</p>
-<h1 id="plotting-the-range-as-a-function-of-angle">Plotting the range as a function of angle</h1>
-<p>plt.figure(figsize=(8, 6))
-plt.plot(angles, ranges, label='Range vs Angle', color='b')
-plt.title('Projectile Range as a Function of Launch Angle', fontsize=14)
-plt.xlabel('Launch Angle (degrees)', fontsize=12)
-plt.ylabel('Range (m)', fontsize=12)
-plt.grid(True)
-plt.legend()
-plt.show()</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
