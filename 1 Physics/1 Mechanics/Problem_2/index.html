@@ -172,6 +172,64 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<h1 id="investigating-the-dynamics-of-a-forced-damped-pendulum">Investigating the Dynamics of a Forced Damped Pendulum</h1>
+<h2 id="1-theoretical-foundation">1. Theoretical Foundation</h2>
+<p>The motion of a forced damped pendulum is governed by a second-order nonlinear differential equation that incorporates damping and external forcing effects.</p>
+<h3 id="governing-equation">Governing Equation</h3>
+<p>The differential equation describing the angular displacement  <span class="arithmatex">\(<span class="arithmatex">\(\theta\)</span>\)</span> of the pendulum is given by:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \sin \theta = A \cos(\omega t)
+\]</div>
+<p>where:
+- <span class="arithmatex">\(<span class="arithmatex">\(\theta(t)\)</span>\)</span>
+ Angular displacement as a function of time<br/>
+- <span class="arithmatex">\(<span class="arithmatex">\(b\)</span>\)</span>
+ Damping coefficient<br/>
+- <span class="arithmatex">\(<span class="arithmatex">\(\frac{g}{L}\)</span>\)</span>
+ Term representing gravitational acceleration over pendulum length<br/>
+- <span class="arithmatex">\(<span class="arithmatex">\(A\)</span>\)</span>
+ Amplitude of the external driving force<br/>
+- <span class="arithmatex">\(<span class="arithmatex">\(\omega\)</span>\)</span>
+ Angular frequency of the driving force</p>
+<h3 id="small-angle-approximation">Small-Angle Approximation</h3>
+<p>For small angular displacements, the nonlinear term can be approximated as:</p>
+<div class="arithmatex">\[
+\sin \theta \approx \theta
+\]</div>
+<p>This leads to the linearized equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + b\frac{d\theta}{dt} + \frac{g}{L} \theta = A \cos(\omega t)
+\]</div>
+<p>This simplification allows analytical techniques to be applied for understanding the system’s behavior.</p>
+<h3 id="phase-space-representation">Phase Space Representation</h3>
+<p><img alt="alt text" src="../image-23.png"/></p>
+<h3 id="general-solution">General Solution</h3>
+<p>The general solution is the sum of the transient and steady-state components:</p>
+<div class="arithmatex">\[
+\theta(t) = \theta_{\text{hom}}(t) + \theta_{\text{part}}(t)
+\]</div>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\theta_{\text{hom}}(t)\)</span>\)</span></p>
+<p>Homogeneous (transient) solution, describing natural damping  </p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\theta_{\text{part}}(t)\)</span>\)</span></p>
+<p>Particular (steady-state) solution, describing forced response</p>
+<h3 id="numerical-results">Numerical Results</h3>
+<p><img alt="alt text" src="../image-24.png"/>
+It shows how the angular position of the system changes with time. It shows the effect of damping and coercive force on the system.</p>
+<h3 id="resonance-conditions">Resonance Conditions</h3>
+<p>Resonance occurs when the driving frequency <span class="arithmatex">\( omega \)</span> approaches the natural frequency of the system:</p>
+<div class="arithmatex">\[
+\omega_0 = \sqrt{\frac{g}{L}}
+\]</div>
+<p>At or near resonance:</p>
+<ul>
+<li>The amplitude of oscillations increases significantly.</li>
+<li>Energy transfer from the driving force to the pendulum is maximized.</li>
+<li>System behavior may become unstable if damping is low.</li>
+</ul>
+<p>Understanding resonance is essential in designing systems where oscillatory behavior must be controlled or optimized.</p>
+<p><img alt="alt text" src="../image-25.png"/> </p>
+<p>This graph visualizes the resonant response of the system. If the drag force is low, there will be a sudden increase in the resonant frequency.</p>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
