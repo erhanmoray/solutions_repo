@@ -633,27 +633,6 @@ R = \frac{v_0^2 \cdot \sin(2\theta)}{g}
    velocity affect the range.</p>
 </li>
 </ol>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-g = 9.81  # gravity (m/s^2)
-angles = 45  # optimal angle in degrees
-theta_rad = np.radians(angles)  # Convert to radians
-initial_velocities = np.linspace(10, 50, 500)  # Different initial velocities
-
-# Range formula
-R = (initial_velocities**2 * np.sin(2 * theta_rad)) / g
-
-# Plot
-plt.figure(figsize=(12, 8))
-plt.plot(initial_velocities, R)
-plt.xlabel("Initial Velocity (m/s)")
-plt.ylabel("Range (meters)")
-plt.title("Range vs. Initial Velocity at 45°")
-plt.grid(True)
-plt.show()
-</code></pre>
 <p><img alt="alt text" src="../image-22.png"/></p>
 <ul>
 <li>
