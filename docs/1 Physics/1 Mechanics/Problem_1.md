@@ -1,3 +1,4 @@
+
 # Problem 1
 
 # Investigating the Range as a Function of the Angle of Projection
@@ -168,7 +169,6 @@ While the simple model for projectile motion offers a good starting point for un
 
 ![alt text](image-3.png)
 
-# Investigating the Range as a Function of the Angle of Projection
 
 ## Theoretical Foundation
 
@@ -187,8 +187,7 @@ Where:
 - \( g \) = Gravitational acceleration (approximately \( 9.81 \, \text{m/s}^2 \)).
 
 The angle \( \theta \) is a key variable affecting the range. The range is maximized when the angle is \( 45^\circ \).
-
-# Investigating the Range as a Function of the Angle of Projection
+n
 
 ## Theoretical Foundation
 
@@ -252,27 +251,330 @@ To simulate the motion, we can use numerical integration methods to solve the di
    
 2. **Iterate for different launch angles** to compute the range \( R(\theta) \).
 
-### Python Code Example
-
-Below is an example Python code to compute and visualize the range for various angles of projection:
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Parameters
-v_0 = 20  # initial velocity in m/s
-g = 9.81  # acceleration due to gravity in m/s^2
-angles = np.linspace(0, 90, 100)  # angles from 0 to 90 degrees
-
-# Function to compute range
-def compute_range(v_0, angle, g):
-    angle_rad = np.radians(angle)
-    return (v_0**2 * np.sin(2*angle_rad)) / g
-
-# Compute the range for different angles
-ranges = [compute_range(v_0, angle, g) for angle in angles]
 
 
 
 
+
+# Investigating the Range as a Function of the Angle of Projection
+
+## 1. Theoretical Foundation
+
+We begin by deriving the governing equations of motion from fundamental principles. This involves solving a basic differential equation to establish the general form of the motion. Highlight how variations in initial conditions lead to a family of solutions.
+
+**Equations of motion:**
+
+For a projectile launched with an initial speed \( v_0 \) at an angle \( \theta \), the equations of motion are:
+
+- Horizontal motion: 
+
+$$ 
+x(t) = v_0 \cdot \cos(\theta) \cdot t 
+$$
+
+- Vertical motion: 
+
+$$ 
+y(t) = v_0 \cdot \sin(\theta) \cdot t - \frac{1}{2}gt^2 
+$$
+
+To find the time of flight, set \( y(t) = 0 \) and solve for \( t \) (ignoring the trivial \( t=0 \) solution):
+
+$$ 
+t = \frac{2v_0 \cdot \sin(\theta)}{g} 
+$$
+
+Then, the range \( R \) becomes:
+![alt text](image-14.png)
+$$ 
+R = v_0 \cdot \cos(\theta) \cdot \frac{2v_0 \cdot \sin(\theta)}{g} = \frac{v_0^2 \cdot \sin(2\theta)}{g} 
+$$
+
+This shows that the range is maximal when \( \theta = 45^\circ \).
+
+![alt text](image-12.png)
+
+## 2. Analysis of the Range
+
+We explore how the range \( R \) changes with angle \( \theta \), keeping \( v_0 \) and \( g \) constant. The function \( \sin(2\theta) \) drives the behavior of \( R \).
+
+![alt text](image-10.png)
+
+### Explanation of the Code
+
+1. **Libraries Used:**
+   - `numpy`: For numerical operations, especially for handling arrays and trigonometric functions.
+
+2. **Constants:**
+   - `v0`: Initial velocity of the projectile. Set to 30 m/s.
+   - `g`: Acceleration due to gravity. Standard value is 9.81 m/s².
+
+![alt text](image-11.png)
+
+3. **Angle Calculation:**
+   - `angles`: An array of angles from 0 to 90 degrees, divided into 500 points for smooth calculation.
+   - `theta_rad`: Conversion of angles from degrees to radians, as trigonometric functions in Python use radians.
+
+
+4. **Range Calculation:**
+   - The range \( R \) is calculated using the formula
+
+   ![alt text](<angle degrees-1.png>)
+
+$$ 
+R = \frac{v_0^2 \cdot \sin(2\theta)}{g} 
+$$
+
+5. **Output:**
+   - The code prints the range for each angle, showing how the range changes with the angle of projection.
+
+## 3. Practical Applications
+
+This model can be adapted for:
+- Launching projectiles from elevated platforms (non-zero initial height),
+- Uneven terrains,
+- Including drag force,
+- Sports like football or golf,
+- Military or aerospace applications.
+
+## 4. Limitations and Extensions
+
+**Limitations:**
+- No air resistance,
+- Flat terrain,
+- Constant gravity,
+- Point mass assumption.
+
+**Extensions:**
+- Add air resistance using numerical simulation,
+- Vary gravity (e.g., on other planets),
+- Include wind effects.
+
+## 📌 Conclusion
+
+The range depends heavily on the angle and initial velocity. The theoretical model is elegant and reveals that a \( 45^\circ \) launch gives the maximum range on flat ground with no air resistance. Real-world factors, however, often shift this optimal angle.
+
+   # Practical Applications
+   
+## 1. Introduction
+
+The theoretical model of projectile motion provides a foundation for understanding how objects move through space when launched at an angle. While the basic model assumes ideal conditions, such as no air resistance and flat terrain, real-world applications often require adaptations to account for more complex scenarios.
+
+## 2. Adapting the Model
+
+### Uneven Terrain
+
+In many real-world situations, projectiles are launched over uneven terrain. This requires modifications to the basic model to account for changes in elevation. For example, if a projectile is launched from a hill or towards a target at a different height, the equations of motion must be adjusted to include initial and final vertical positions.
+
+- **Equation Modification:** The vertical motion equation can be modified to include initial and final heights:
+
+  $$
+  y(t) = y_0 + v_0 \cdot \sin(\theta) \cdot t - \frac{1}{2}gt^2
+  $$
+
+  where \( y_0 \) is the initial height.
+
+![alt text](image-17.png)
+
+### Air Resistance
+
+Air resistance is a significant factor in projectile motion, especially for objects moving at high speeds or over long distances. The presence of air resistance introduces a drag force that opposes the motion of the projectile, reducing its range and altering its trajectory.
+
+- **Drag Force:** The drag force can be modeled as proportional to the velocity of the projectile, often using a quadratic relationship:
+
+  $$
+  F_d = -c \cdot v^2
+  $$
+
+  where \( c \) is the drag coefficient and \( v \) is the velocity.
+
+- **Numerical Simulation:** Incorporating air resistance into the model typically requires numerical methods to solve the resulting differential equations, as they become too complex for analytical solutions.
+
+![alt text](image-18.png)
+
+### Varying Gravitational Fields
+
+On different planets or celestial bodies, the gravitational acceleration \( g \) varies. This affects the range and trajectory of projectiles. For instance, on the Moon, where gravity is about 1/6th of Earth's, a projectile will travel much farther for the same initial velocity and angle.
+
+- **Equation Adjustment:** The range equation can be adjusted for different gravitational fields:
+
+  $$
+  R = \frac{v_0^2 \cdot \sin(2\theta)}{g_{\text{body}}}
+  $$
+
+  where \( g_{\text{body}} \) is the gravitational acceleration on the celestial body.
+
+![alt text](image-19.png)
+
+## 3. Real-World Examples
+
+### Sports
+
+In sports like golf, football, or basketball, understanding projectile motion is crucial for optimizing performance. Players and coaches use principles of projectile motion to improve accuracy and distance.
+
+### Military and Aerospace
+
+Projectile motion principles are applied in the military for targeting and launching projectiles. In aerospace, understanding how objects move through different gravitational fields is essential for mission planning and execution.
+
+### Engineering and Construction
+
+Engineers use projectile motion models to design structures and systems that involve moving objects, such as roller coasters or water fountains.
+
+## 4. Conclusion
+
+The basic model of projectile motion provides a valuable framework for understanding how objects move through space. By adapting this model to account for real-world factors such as uneven terrain, air resistance, and varying gravitational fields, we can better predict and optimize the behavior of projectiles in diverse applications.
+# Implementation
+
+## 1. Introduction
+
+The objective is to develop a computational tool or algorithm to simulate projectile motion. This tool will allow us to explore how the range of a projectile varies with the angle of projection under different initial conditions. By varying parameters such as initial velocity and gravitational acceleration, we can gain insights into the dynamics of projectile motion.
+
+## 2. Theoretical Foundation
+
+### Equations of Motion
+
+Projectile motion is governed by the following equations, assuming no air resistance and a constant gravitational field:
+
+- **Horizontal motion:**
+
+  $$ 
+  x(t) = v_0 \cdot \cos(\theta) \cdot t 
+  $$
+
+- **Vertical motion:**
+
+  $$ 
+  y(t) = v_0 \cdot \sin(\theta) \cdot t - \frac{1}{2}gt^2 
+  $$
+
+The horizontal range \( R \) of the projectile, which is the total horizontal distance traveled, is given by:
+
+$$ 
+R = \frac{v_0^2 \cdot \sin(2\theta)}{g} 
+$$
+
+where:
+- \( v_0 \) is the initial velocity,
+- \( \theta \) is the angle of projection,
+- \( g \) is the acceleration due to gravity.
+
+## 3. Computational Tool
+
+### Algorithm Design
+
+The algorithm will simulate projectile motion by calculating the range for a set of angles and initial conditions. The steps are as follows:
+
+1. **Define Parameters:**
+   - Initial velocities: A list of different initial velocities to explore.
+   - Gravitational acceleration: A constant value, typically 9.81 m/s² for Earth.
+   - Angles: A range of angles from 0 to 90 degrees.
+
+2. **Convert Angles to Radians:**
+   - Since trigonometric functions in Python use radians, convert the angles from degrees to radians.
+
+3. **Calculate Range:**
+   - For each combination of initial velocity and angle, calculate the range using the formula \( R = \frac{v_0^2 \cdot \sin(2\theta)}{g} \).
+
+4. **Store Results:**
+   - Store the calculated ranges for each set of initial conditions for later visualization.
+
+### Python Implementation
+
+![alt text](image-21.png)
+
+### Explanation of the Code
+
+1. **Function Definition:**
+   - `simulate_projectile_motion(v0, g, angles)`: This function calculates the range for a given initial velocity, gravitational acceleration, and set of angles. It returns an array of ranges corresponding to each angle.
+
+2. **Parameters:**
+   - `initial_velocities`: A list of different initial velocities to simulate. This allows us to explore how changes in initial velocity affect the range.
+   
+   - `g`: Gravitational acceleration, set to 9.81 m/s², which is the standard value on Earth.
+   
+   - `angles`: An array of angles from 0 to 90 degrees, providing a comprehensive view of how the range changes with angle.
+
+3. **Simulation:**
+   - For each initial velocity, the function calculates the range for each angle and stores the results in a dictionary for later analysis and visualization.
+
+## 4. Conclusion
+
+This computational tool provides a framework for simulating projectile motion under various initial conditions. By adjusting parameters such as initial velocity and gravitational acceleration, we can explore a wide range of scenarios and gain a deeper understanding of the factors influencing projectile motion. The results can be visualized to provide insights into the optimal conditions for maximizing range.
+# Implementation
+
+## 1. Introduction
+
+The objective is to develop a computational tool or algorithm to simulate projectile motion. This tool will allow us to explore how the range of a projectile varies with the angle of projection under different initial conditions. By varying parameters such as initial velocity and gravitational acceleration, we can gain insights into the dynamics of projectile motion.
+
+## 2. Theoretical Foundation
+
+### Equations of Motion
+
+Projectile motion is governed by the following equations, assuming no air resistance and a constant gravitational field:
+
+- **Horizontal motion:**
+
+  $$ 
+  x(t) = v_0 \cdot \cos(\theta) \cdot t 
+  $$
+
+- **Vertical motion:**
+
+  $$ 
+  y(t) = v_0 \cdot \sin(\theta) \cdot t - \frac{1}{2}gt^2 
+  $$
+
+The horizontal range \( R \) of the projectile, which is the total horizontal distance traveled, is given by:
+
+$$ 
+R = \frac{v_0^2 \cdot \sin(2\theta)}{g} 
+$$
+
+where:
+- \( v_0 \) is the initial velocity,
+- \( \theta \) is the angle of projection,
+- \( g \) is the acceleration due to gravity.
+
+## 3. Computational Tool
+
+### Algorithm Design
+
+The algorithm will simulate projectile motion by calculating the range for a set of angles and initial conditions. The steps are as follows:
+
+1. **Define Parameters:**
+   - Initial velocities: A list of different initial velocities to explore.
+   - Gravitational acceleration: A constant value, typically 9.81 m/s² for Earth.
+   - Angles: A range of angles from 0 to 90 degrees.
+
+2. **Convert Angles to Radians:**
+   - Since trigonometric functions in Python use radians, convert the angles from degrees to radians.
+
+3. **Calculate Range:**
+   - For each combination of initial velocity and angle, calculate the range using the formula \( R = \frac{v_0^2 \cdot \sin(2\theta)}{g} \).
+
+4. **Store Results:**
+   - Store the calculated ranges for each set of initial conditions for later visualization.
+
+
+### Explanation of the Code
+
+1. **Function Definition:**
+   - `simulate_projectile_motion(v0, g, angles)`: This function calculates the range for a given initial velocity, gravitational acceleration, and set of angles. It returns an array of ranges corresponding to each angle.
+
+2. **Parameters:**
+   
+   - `initial_velocities`: A list of different initial velocities to simulate. This allows us to explore how changes in initial 
+   velocity affect the range.
+
+   ![alt text](image-22.png)
+
+   - `g`: Gravitational acceleration, set to 9.81 m/s², which is the standard value on Earth.
+   
+   - `angles`: An array of angles from 0 to 90 degrees, providing a comprehensive view of how the range changes with angle.
+
+3. **Simulation:**
+   - For each initial velocity, the function calculates the range for each angle and stores the results in a dictionary for later analysis and visualization.
+
+## 4. Conclusion
+
+This computational tool provides a framework for simulating projectile motion under various initial conditions. By adjusting parameters such as initial velocity and gravitational acceleration, we can explore a wide range of scenarios and gain a deeper understanding of the factors influencing projectile motion. The results can be visualized to provide insights into the optimal conditions for maximizing range.
