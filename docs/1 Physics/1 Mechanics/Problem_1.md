@@ -566,6 +566,29 @@ The algorithm will simulate projectile motion by calculating the range for a set
    - `initial_velocities`: A list of different initial velocities to simulate. This allows us to explore how changes in initial 
    velocity affect the range.
 
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Constants
+g = 9.81  # gravity (m/s^2)
+angles = 45  # optimal angle in degrees
+theta_rad = np.radians(angles)  # Convert to radians
+initial_velocities = np.linspace(10, 50, 500)  # Different initial velocities
+
+# Range formula
+R = (initial_velocities**2 * np.sin(2 * theta_rad)) / g
+
+# Plot
+plt.figure(figsize=(12, 8))
+plt.plot(initial_velocities, R)
+plt.xlabel("Initial Velocity (m/s)")
+plt.ylabel("Range (meters)")
+plt.title("Range vs. Initial Velocity at 45°")
+plt.grid(True)
+plt.show()
+```
+
    ![alt text](image-22.png)
 
    - `g`: Gravitational acceleration, set to 9.81 m/s², which is the standard value on Earth.
