@@ -53,7 +53,7 @@ This simplification allows analytical techniques to be applied for understanding
 
 ![alt text](image-34.png)
 
- ![alt text](image-36.png)
+![alt text](image-36.png)
 
 
 ### Phase Space Representation
