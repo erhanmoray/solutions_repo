@@ -43,7 +43,21 @@ $$
 
 This simplification allows analytical techniques to be applied for understanding the system’s behavior.
 
+### Diffrent casues
+
+![alt text](image-30.png)
+
+![alt text](image-32.png)
+
+![alt text](image-31.png) 
+
+![alt text](image-34.png)
+
+ ![alt text](image-36.png)
+
+
 ### Phase Space Representation
+
 ![alt text](image-23.png)
 
 ### General Solution
@@ -62,9 +76,14 @@ $$
  $$\theta_{\text{part}}(t)$$
 
  Particular (steady-state) solution, describing forced response
-### Numerical Results
+
+### Numerical Results 
+
+
  ![alt text](image-24.png)
+
 It shows how the angular position of the system changes with time. It shows the effect of damping and coercive force on the system.
+
 ### Resonance Conditions
 
 Resonance occurs when the driving frequency \( omega \) approaches the natural frequency of the system:
@@ -190,10 +209,7 @@ In electronics, oscillating circuits can be modeled using the forced damped pend
 
 The forced damped pendulum model provides valuable insights into the behavior of various systems under external forces. By adjusting parameters such as the damping coefficient, driving amplitude, and driving frequency, engineers and scientists can optimize the performance and stability of these systems in real-world applications.
 
-![alt text](image-32.png)
 
-
-![alt text](image-34.png)
 # Implementation
 
 In this section, we will create a computational model to simulate the motion of a forced damped pendulum. We will explore the behavior under various damping, driving force, and initial conditions. Additionally, we will plot phase diagrams and Poincaré sections to illustrate transitions to chaos.
@@ -236,11 +252,11 @@ is the angular displacement,
 4. **Visualization:**
    - **Phase Diagrams:** Plot $$\theta$$ vs. $$\frac{d\theta}{dt}$$ to observe the system's behavior.
 
-  ![alt text](image-31.png)
-  ![alt text](image-36.png)
+
+ 
    - **Poincaré Sections:** Sample the phase space at regular intervals to identify periodic and chaotic behavior.
    
-  ![alt text](image-30.png)
+  
 
 
 ### Analysis
