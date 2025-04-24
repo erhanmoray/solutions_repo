@@ -115,8 +115,9 @@ T^2 = \frac{4\pi^2}{G M} \cdot r^3
 $$
 
 ---
+![alt text](image-26.png)
 
-![alt text](image-3.png)
+
 
 ## ✅ Final Relationship
 
@@ -131,7 +132,15 @@ This means that **the square of the orbital period is proportional to the cube o
 This is the **mathematical form of Kepler’s Third Law**, and it holds true for many orbital systems in astronomy, especially where circular approximation is valid.
 
 ---
-![alt text](image-1.png)
+## Different Casues
+
+![alt text](image-22.png)
+
+![alt text](image-23.png)
+
+![alt text](image-24.png)
+
+![alt text](image-25.png)
 
 ![alt text](image.png)
 
