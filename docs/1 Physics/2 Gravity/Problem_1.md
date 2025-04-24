@@ -115,9 +115,6 @@ T^2 = \frac{4\pi^2}{G M} \cdot r^3
 $$
 
 ---
-![alt text](image-26.png)
-
-
 
 ## ✅ Final Relationship
 
@@ -132,17 +129,8 @@ This means that **the square of the orbital period is proportional to the cube o
 This is the **mathematical form of Kepler’s Third Law**, and it holds true for many orbital systems in astronomy, especially where circular approximation is valid.
 
 ---
-## Different Casues
 
 ![alt text](image-22.png)
-
-![alt text](image-23.png)
-
-![alt text](image-24.png)
-
-![alt text](image-25.png)
-
-![alt text](image.png)
 
 ## Orbital Period and Orbital Radius: Astronomical Implications
 
@@ -218,47 +206,18 @@ It confirms that:
 - Gravitational force governs orbital motion
 - The laws are consistent across different celestial systems
 
-![alt text](image-7.png)
+!
 
 📊 **Observational data** from planets and moons show extraordinary agreement with the \( T^2 \propto r^3 \) relationship, strengthening our understanding of gravitational physics.
 
-![alt text](image-4.png)
+
 
 ![alt text](image-8.png)
 
 ---
 
-### 🧠 Conclusion
-
-The orbital period-radius relationship is not merely a mathematical curiosity — it is one of the most **fundamental tools in astronomy**. From weighing planets and stars to mapping our solar system and discovering alien worlds, Kepler’s Third Law remains a cornerstone of celestial mechanics.
-
-It elegantly ties time, space, and mass together in a single, testable formula:
-
-$$
-T^2 = \frac{4\pi^2}{G M} r^3
-$$
-
 Its enduring relevance reminds us of the deep harmony between **mathematics** and the **universe**.
  
- # 🌍 Orbital Period and Orbital Radius — Real-World Examples
-
-The relationship between the **orbital period** \( T \) and the **orbital radius** \( r \) for celestial bodies in circular orbits is governed by **Kepler’s Third Law**, which, when derived from Newton’s Law of Universal Gravitation, takes the form:
-
-$$
-T^2 = \frac{4\pi^2}{G M} r^3
-$$
-
-Here:
-
-- \( T \) is the orbital period (in seconds),
-- \( r \) is the orbital radius (in meters),
-- \( G \) is the gravitational constant (\(6.674 \times 10^{-11} \ \mathrm{Nm^2/kg^2}\)),
-- \( M \) is the mass of the central body (e.g., the Earth or the Sun).
-
-Let’s apply this to two significant real-world examples.
-
-![alt text](image-12.png)
-
 ---
 
 ## 🌕 Example 1: The Moon Orbiting the Earth
@@ -308,6 +267,8 @@ $$
 
 ✅ Again, this aligns very closely with the actual orbital period of Mars (687 days or ~1.88 years).
 
+![alt text](image-23.png)
+
 ![alt text](image-11.png)
 
 ---
@@ -331,13 +292,6 @@ $$
 
 Whether modeling moons, planets, or satellites, this fundamental law allows scientists and engineers to predict orbital characteristics with remarkable precision.
 
-![alt text](image-13.png)
-
-## 🧮 Orbital Period and Orbital Radius: Implementing a Computational Model
-
-To validate the mathematical relationship between the **orbital period** \(T\) and the **orbital radius** \(r\) in circular motion, we can build a simple computational simulation using Newtonian physics.
-
-The theoretical relation is derived from equating **gravitational force** and **centripetal force** for an object in circular orbit:
 
 $$
 F_{\text{gravity}} = \frac{G M m}{r^2}, \quad F_{\text{centripetal}} = \frac{m v^2}{r}
@@ -373,53 +327,8 @@ $$
 T^2 \propto r^3
 $$
 
-![alt text](image-15.png)
-
-![alt text](image-14.png)
-
-![alt text](image-17.png)
-
 ---
-
 
 ### 🧪 Numerical Simulation (Model Overview)
 
 We simulate a small object in circular orbit around a massive body using the gravitational force to update velocity and position iteratively. The simulation verifies if the object's orbital period obeys the theoretical formula.
-
-![alt text](image-18.png)
-
----
-
-### 🧰 Parameters
-
-- \( G = 6.67430 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2} \)
-- \( M \): Mass of the central body (e.g., Sun or Earth)
-- \( r \): Initial orbital radius
-- Time step \( \Delta t \): Small interval for updating motion
-- Total simulation time: Enough to complete at least one orbit
-
-![alt text](image-19.png)
----
-
-### 📈 Expected Results
-
-By simulating several orbits at different radii, and measuring the periods \(T\), we expect the following:
-
-- The log-log plot of \( T^2 \) vs. \( r^3 \) should yield a straight line.
-- The slope of this line should be approximately 1, confirming Kepler’s Third Law numerically.
-
-![alt text](image-20.png)
-
----
-
-### ✅ Conclusion
-
-This computational approach not only visualizes orbital motion but also **numerically verifies** the theoretical relationship:
-
-$$
-T^2 \propto r^3
-$$
-
-It highlights how physical laws manifest in simulations and strengthens the connection between mathematical models and real-world orbital mechanics.
-
-![alt text](image-21.png)
