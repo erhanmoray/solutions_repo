@@ -172,6 +172,296 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-3">Problem 3</h1>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth">🚀 Trajectories of a Freely Released Payload Near Earth</h1>
+<p>When a payload is released near Earth without propulsion (i.e., under the sole influence of gravity), its <strong>trajectory</strong> depends entirely on its <strong>mechanical energy</strong> and <strong>initial velocity vector</strong>. The shape of the trajectory—whether <strong>elliptical</strong>, <strong>parabolic</strong>, or <strong>hyperbolic</strong>—is governed by classical Newtonian mechanics and conic section geometry.</p>
+<hr/>
+<h2 id="total-mechanical-energy">🧮 Total Mechanical Energy</h2>
+<p>The total mechanical energy <span class="arithmatex">\( E \)</span> of the payload is the sum of its <strong>kinetic energy (K.E.)</strong> and <strong>gravitational potential energy (U)</strong>:</p>
+<div class="arithmatex">\[
+E = \frac{1}{2}mv^2 - \frac{GMm}{r}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( m \)</span>: mass of the payload<br/>
+- <span class="arithmatex">\( v \)</span>: initial speed of the payload<br/>
+- <span class="arithmatex">\( M \)</span>: mass of the Earth<br/>
+- <span class="arithmatex">\( r \)</span>: distance from the center of the Earth<br/>
+- <span class="arithmatex">\( G \)</span>: gravitational constant  </p>
+<hr/>
+<h2 id="classification-of-trajectories">🌐 Classification of Trajectories</h2>
+<p>The sign and magnitude of the <strong>total mechanical energy</strong> determine the shape of the trajectory:</p>
+<h3 id="1-elliptical-trajectory-e-0">1. <strong>Elliptical Trajectory</strong> <span class="arithmatex">\((E &lt; 0)\)</span></h3>
+<p>If the total energy is <strong>negative</strong>, the object is <strong>gravitationally bound</strong> to Earth. Its trajectory will be an <strong>ellipse</strong>, which includes <strong>circular orbits</strong> as a special case.</p>
+<ul>
+<li>
+<p><strong>Velocity condition</strong>:<br/>
+  $$
+  v &lt; \sqrt{\frac{2GM}{r}} \quad \text{(i.e., } v &lt; v_{\text{escape}} \text{)}
+  $$</p>
+</li>
+<li>
+<p><strong>Example</strong>: Most satellites, the Moon  </p>
+</li>
+<li><strong>Shape</strong>: Closed orbit  </li>
+<li><strong>Eccentricity</strong>: <span class="arithmatex">\( 0 \leq e &lt; 1 \)</span></li>
+</ul>
+<h3 id="2-parabolic-trajectory-e-0">2. <strong>Parabolic Trajectory</strong> <span class="arithmatex">\((E = 0)\)</span></h3>
+<p>If the total mechanical energy is exactly <strong>zero</strong>, the trajectory is <strong>parabolic</strong>. The object reaches the <strong>escape velocity</strong> but with zero leftover energy.</p>
+<ul>
+<li>
+<p><strong>Velocity condition</strong>:<br/>
+  $$
+  v = \sqrt{\frac{2GM}{r}} \quad \text{(i.e., } v = v_{\text{escape}} \text{)}
+  $$</p>
+</li>
+<li>
+<p><strong>Example</strong>: Idealized escape trajectory without excess energy  </p>
+</li>
+<li><strong>Shape</strong>: Open, non-repeating path  </li>
+<li><strong>Eccentricity</strong>: <span class="arithmatex">\( e = 1 \)</span></li>
+</ul>
+<h3 id="3-hyperbolic-trajectory-e-0">3. <strong>Hyperbolic Trajectory</strong> <span class="arithmatex">\((E &gt; 0)\)</span></h3>
+<p>If the total energy is <strong>positive</strong>, the payload is <strong>not bound</strong> and will follow a <strong>hyperbolic escape</strong> trajectory.</p>
+<ul>
+<li>
+<p><strong>Velocity condition</strong>:<br/>
+  $$
+  v &gt; \sqrt{\frac{2GM}{r}} \quad \text{(i.e., } v &gt; v_{\text{escape}} \text{)}
+  $$</p>
+</li>
+<li>
+<p><strong>Example</strong>: Interplanetary probes like Voyager or Parker Solar Probe  </p>
+</li>
+<li><strong>Shape</strong>: Open trajectory  </li>
+<li><strong>Eccentricity</strong>: <span class="arithmatex">\( e &gt; 1 \)</span></li>
+</ul>
+<hr/>
+<h2 id="eccentricity-and-orbit-shape">🌀 Eccentricity and Orbit Shape</h2>
+<p>The eccentricity <span class="arithmatex">\( e \)</span> of the conic section also determines the shape:</p>
+<ul>
+<li><span class="arithmatex">\( e = 0 \)</span>: Circle  </li>
+<li><span class="arithmatex">\( 0 &lt; e &lt; 1 \)</span>: Ellipse  </li>
+<li><span class="arithmatex">\( e = 1 \)</span>: Parabola  </li>
+<li><span class="arithmatex">\( e &gt; 1 \)</span>: Hyperbola</li>
+</ul>
+<p>The general orbit equation in polar coordinates:</p>
+<div class="arithmatex">\[
+r(\theta) = \frac{p}{1 + e \cos \theta}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( r(\theta) \)</span>: radial distance as a function of angle<br/>
+- <span class="arithmatex">\( p \)</span>: semi-latus rectum<br/>
+- <span class="arithmatex">\( e \)</span>: eccentricity<br/>
+- <span class="arithmatex">\( \theta \)</span>: true anomaly</p>
+<hr/>
+<h2 id="energy-and-velocity-relationship">🔧 Energy and Velocity Relationship</h2>
+<p>Rewriting the energy expression per unit mass (specific mechanical energy):</p>
+<div class="arithmatex">\[
+\epsilon = \frac{v^2}{2} - \frac{GM}{r}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( \epsilon &lt; 0 \)</span>: elliptical orbit<br/>
+- <span class="arithmatex">\( \epsilon = 0 \)</span>: parabolic escape<br/>
+- <span class="arithmatex">\( \epsilon &gt; 0 \)</span>: hyperbolic escape</p>
+<p>Also useful is the <strong>vis-viva equation</strong>:</p>
+<div class="arithmatex">\[
+v^2 = GM \left( \frac{2}{r} - \frac{1}{a} \right)
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( a \)</span>: semi-major axis of the orbit<br/>
+- <span class="arithmatex">\( r \)</span>: current distance from focus (Earth’s center)<br/>
+- <span class="arithmatex">\( v \)</span>: orbital speed at distance <span class="arithmatex">\( r \)</span></p>
+<hr/>
+<h2 id="summary-table">🚀 Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Trajectory Type</th>
+<th>Condition on Energy</th>
+<th>Velocity Range</th>
+<th>Bound?</th>
+<th>Eccentricity</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Elliptical</strong></td>
+<td><span class="arithmatex">\( E &lt; 0 \)</span></td>
+<td><span class="arithmatex">\( v &lt; v_2 \)</span></td>
+<td>Yes</td>
+<td><span class="arithmatex">\( 0 \leq e &lt; 1 \)</span></td>
+<td>Satellites, Moon</td>
+</tr>
+<tr>
+<td><strong>Parabolic</strong></td>
+<td><span class="arithmatex">\( E = 0 \)</span></td>
+<td><span class="arithmatex">\( v = v_2 \)</span></td>
+<td>No</td>
+<td><span class="arithmatex">\( e = 1 \)</span></td>
+<td>Ideal escape</td>
+</tr>
+<tr>
+<td><strong>Hyperbolic</strong></td>
+<td><span class="arithmatex">\( E &gt; 0 \)</span></td>
+<td><span class="arithmatex">\( v &gt; v_2 \)</span></td>
+<td>No</td>
+<td><span class="arithmatex">\( e &gt; 1 \)</span></td>
+<td>Voyager, Pioneer</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="notes">📌 Notes</h2>
+<ul>
+<li>These are idealized trajectories: they assume a <strong>two-body system</strong> and ignore perturbations (like atmospheric drag, third-body effects, and Earth’s oblateness).</li>
+<li>Real mission planning requires additional corrections and considerations, including <strong>launch windows</strong>, <strong>gravity assists</strong>, and <strong>orbital insertion burns</strong>.</li>
+</ul>
+<hr/>
+<h2 id="applications">🔭 Applications</h2>
+<p>Understanding these trajectories is vital for:</p>
+<ul>
+<li>Launching and maintaining satellites (elliptical)</li>
+<li>Planning planetary missions (hyperbolic escape)</li>
+<li>Calculating required delta-v for maneuvers</li>
+<li>Designing gravity assist paths and escape strategies</li>
+</ul>
+<p><img alt="alt text" src="../image-29.png"/></p>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth_1">Trajectories of a Freely Released Payload Near Earth</h1>
+<p>This document presents a numerical approach to simulate and compute the trajectory of a freely released payload near Earth. The analysis assumes a vacuum environment (no air resistance), and the only force acting on the payload is Earth's gravitational pull.</p>
+<h2 id="1-physical-model">1. Physical Model</h2>
+<p>The motion of a payload under the influence of Earth's gravity is governed by Newton’s law of universal gravitation and Newton’s second law:</p>
+<div class="arithmatex">\[
+\vec{F} = m\vec{a} = -\frac{G M m}{r^2} \hat{r}
+\]</div>
+<p>Dividing both sides by the mass <span class="arithmatex">\( m \)</span>, the acceleration is given by:</p>
+<div class="arithmatex">\[
+\vec{a} = -\frac{G M}{r^3} \vec{r}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( \vec{r} \)</span> is the position vector from the center of the Earth,
+- <span class="arithmatex">\( G \)</span> is the gravitational constant,
+- <span class="arithmatex">\( M \)</span> is the mass of the Earth,
+- <span class="arithmatex">\( r = \|\vec{r}\| \)</span> is the magnitude of the position vector.</p>
+<h2 id="2-initial-conditions">2. Initial Conditions</h2>
+<p>Let the initial conditions be defined as:
+- Initial position: <span class="arithmatex">\( \vec{r}_0 = [x_0, y_0] \)</span>
+- Initial velocity: <span class="arithmatex">\( \vec{v}_0 = [v_{x0}, v_{y0}] \)</span>
+- Altitude: <span class="arithmatex">\( h \)</span>, such that <span class="arithmatex">\( r_0 = R_{\oplus} + h \)</span></p>
+<p>Here, <span class="arithmatex">\( R_{\oplus} \)</span> is Earth's radius.</p>
+<p><img alt="alt text" src="../image-30.png"/></p>
+<h2 id="3-numerical-integration">3. Numerical Integration</h2>
+<p>We use the <strong>4th-order Runge-Kutta method</strong> (RK4) to integrate the system of ordinary differential equations:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac{d\vec{r}}{dt} &amp;= \vec{v} \\
+\frac{d\vec{v}}{dt} &amp;= -\frac{G M}{\|\vec{r}\|^3} \vec{r}
+\end{aligned}
+\]</div>
+<p>At each time step <span class="arithmatex">\( t \)</span>, update <span class="arithmatex">\( \vec{r}(t) \)</span> and <span class="arithmatex">\( \vec{v}(t) \)</span> using RK4.</p>
+<h2 id="5-visualization">5. Visualization</h2>
+<p>After integrating over time, the trajectory <span class="arithmatex">\( \vec{r}(t) \)</span> can be plotted to visualize the orbit or impact trajectory.</p>
+<p><img alt="alt text" src="../image-31.png"/></p>
+<h1 id="trajectories-of-a-freely-released-payload-near-earth_2">Trajectories of a Freely Released Payload Near Earth</h1>
+<p>The paths followed by a payload released near Earth vary based on its <strong>initial velocity</strong> and <strong>altitude</strong>. These trajectories determine whether the payload:</p>
+<ul>
+<li>enters into orbit (orbital insertion),</li>
+<li>reenters Earth's atmosphere (reentry),</li>
+<li>or escapes Earth's gravitational field (escape trajectory).</li>
+</ul>
+<h2 id="1-orbital-insertion">1. Orbital Insertion</h2>
+<p>When the payload's velocity is sufficient to balance gravitational acceleration but not high enough to escape, it enters a <strong>closed elliptical orbit</strong> around Earth.</p>
+<p>This condition corresponds to:</p>
+<div class="arithmatex">\[
+v &lt; v_{\text{escape}} \quad \text{and} \quad v \approx v_{\text{orbital}}
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( v_{\text{orbital}} = \sqrt{\frac{G M}{r}} \)</span>
+- <span class="arithmatex">\( r \)</span> is the distance from Earth's center.</p>
+<p>The trajectory is an <strong>ellipse</strong>, and if perfectly balanced, it becomes a <strong>circular orbit</strong>.</p>
+<h2 id="2-reentry">2. Reentry</h2>
+<p>If the initial velocity is <strong>too low</strong>, the payload lacks enough kinetic energy to maintain orbit and begins to descend toward Earth. This is referred to as <strong>suborbital</strong> or <strong>reentry trajectory</strong>.</p>
+<p>The total mechanical energy is:</p>
+<div class="arithmatex">\[
+E = \frac{1}{2}mv^2 - \frac{G M m}{r} &lt; 0
+\]</div>
+<p>But unlike a stable orbit, the trajectory intersects Earth's surface (if we ignore atmospheric drag):</p>
+<ul>
+<li>The payload may <strong>impact Earth</strong>,</li>
+<li>Or <strong>reenter the atmosphere</strong>, depending on its altitude.</li>
+</ul>
+<p><img alt="alt text" src="../image-32.png"/></p>
+<h2 id="3-escape-trajectory">3. Escape Trajectory</h2>
+<p>If the velocity exceeds the <strong>escape velocity</strong>:</p>
+<div class="arithmatex">\[
+v \geq v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
+\]</div>
+<p>Then the payload has enough kinetic energy to overcome Earth's gravitational pull completely.</p>
+<p>The total mechanical energy becomes:</p>
+<div class="arithmatex">\[
+E = \frac{1}{2}mv^2 - \frac{G M m}{r} \geq 0
+\]</div>
+<p>This results in a <strong>hyperbolic trajectory</strong>.</p>
+<h2 id="summary-of-trajectory-types">Summary of Trajectory Types</h2>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Velocity Relative to <span class="arithmatex">\( v_{\text{escape}} \)</span></th>
+<th>Trajectory Type</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\( v &lt; v_{\text{orbital}} \)</span></td>
+<td>Low velocity</td>
+<td>Suborbital / ballistic</td>
+<td>Reentry / impact</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( v \approx v_{\text{orbital}} \)</span></td>
+<td>Sufficient for orbit</td>
+<td>Elliptical orbit</td>
+<td>Orbital insertion</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\( v \geq v_{\text{escape}} \)</span></td>
+<td>High velocity</td>
+<td>Hyperbolic / escape</td>
+<td>Leaves Earth's gravity</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="alt text" src="../image-34.png"/></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The fate of a freely released payload depends critically on its initial conditions. By controlling the magnitude and direction of its initial velocity, mission planners can achieve different outcomes: safe orbit, controlled reentry, or interplanetary escape.</p>
+<p><img alt="alt text" src="../image-33.png"/></p>
+<h2 id="trajectories-of-a-freely-released-payload-near-earth_3">Trajectories of a Freely Released Payload Near Earth</h2>
+<p>This tool simulates and visualizes payload trajectories under Earth’s gravity using initial velocity magnitude and direction.</p>
+<h3 id="governing-equations">Governing Equations</h3>
+<p>The payload is influenced solely by gravity:</p>
+<div class="arithmatex">\[
+\vec{F} = -\frac{G M m}{r^2} \hat{r}
+\]</div>
+<p>Acceleration:</p>
+<div class="arithmatex">\[
+\vec{a} = -\frac{G M}{r^2} \hat{r}
+\]</div>
+<h3 id="velocity-conditions">Velocity Conditions</h3>
+<ul>
+<li>Orbital velocity:</li>
+</ul>
+<div class="arithmatex">\[
+v_{\text{orbital}} = \sqrt{\frac{G M}{r}}
+\]</div>
+<ul>
+<li>Escape velocity:</li>
+</ul>
+<div class="arithmatex">\[
+v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
+\]</div>
+<h3 id="python-simulation-code">Python Simulation Code</h3>
+<p><img alt="alt text" src="../image-35.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
