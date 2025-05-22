@@ -307,5 +307,6 @@ $$
 v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
 $$
 
+![alt text](image-36.png)
 
 ![alt text](image-35.png)
