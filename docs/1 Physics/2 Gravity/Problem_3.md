@@ -307,6 +307,5 @@ $$
 v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
 $$
 
-### Python Simulation Code
 
 ![alt text](image-35.png)
