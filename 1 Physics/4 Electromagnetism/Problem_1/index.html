@@ -72,6 +72,30 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#electromagnetism-lorentz-force-simulation">Electromagnetism: Lorentz Force Simulation</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-motivation">1. Motivation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-problem-statement">2. Problem Statement</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-simulation-setup">3. Simulation Setup</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-python-code-for-google-colab">4. Python Code for Google Colab</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_1"></a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#5-analysis-of-the-result">5. Analysis of the Result</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#6-adding-visualization-as-a-gif-bonus">6. Adding Visualization as a GIF (Bonus)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#7-real-world-applications">7. Real-World Applications</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#8-further-enhancements">8. Further Enhancements</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -172,6 +196,157 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<hr/>
+<h2 id="electromagnetism-lorentz-force-simulation"><strong>Electromagnetism: Lorentz Force Simulation</strong></h2>
+<h3 id="1-motivation"><strong>1. Motivation</strong></h3>
+<p>Charged particles in electric and magnetic fields experience the <strong>Lorentz force</strong>, given by:</p>
+<div class="arithmatex">\[
+\\mathbf{F} = q\\mathbf{E} + q\\mathbf{v} \\times \\mathbf{B}
+\]</div>
+<p>This force dictates the motion of particles in systems such as:</p>
+<ul>
+<li>Particle accelerators (e.g., cyclotrons),</li>
+<li>Mass spectrometers,</li>
+<li>Plasma confinement in fusion reactors,</li>
+<li>The Earth's magnetosphere affecting solar wind particles.</li>
+</ul>
+<p>Understanding this force through simulation helps us visualize phenomena such as <strong>helical motion</strong>, <strong>circular orbits</strong>, and <strong>drift velocities</strong>.</p>
+<hr/>
+<h3 id="2-problem-statement"><strong>2. Problem Statement</strong></h3>
+<p>We will simulate and visualize the trajectory of a charged particle moving under:</p>
+<ul>
+<li>Only a magnetic field (<strong>circular or helical motion</strong>),</li>
+<li>Only an electric field (<strong>linear acceleration</strong>),</li>
+<li>Both fields simultaneously (<strong>complex motion: drift, helical</strong>).</li>
+</ul>
+<hr/>
+<h3 id="3-simulation-setup"><strong>3. Simulation Setup</strong></h3>
+<p>The equation of motion under Lorentz force is:</p>
+<div class="arithmatex">\[
+\\mathbf{a} = \\frac{\\mathbf{F}}{m} = \\frac{q}{m}(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})
+\]</div>
+<p>We will use the <strong>Euler method</strong> to integrate the equations numerically.</p>
+<hr/>
+<h3 id="4-python-code-for-google-colab"><strong>4. Python Code for Google Colab</strong></h3>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# --- Constants ---
+q = 1.6e-19       # Charge of the particle (Coulombs)
+m = 9.11e-31      # Mass of electron (kg)
+
+# --- Fields ---
+E = np.array([0.0, 0.0, 1e5])     # Electric field (V/m)
+B = np.array([0.0, 0.0, 1.0])     # Magnetic field (T)
+
+# --- Initial Conditions ---
+r0 = np.array([0.0, 0.0, 0.0])    # Initial position (m)
+v0 = np.array([1e6, 0.0, 0.0])    # Initial velocity (m/s)
+
+# --- Time Parameters ---
+dt = 1e-11        # Time step (s)
+steps = 5000      # Number of iterations
+
+# --- Arrays for position and velocity ---
+r = np.zeros((steps, 3))
+v = np.zeros((steps, 3))
+r[0] = r0
+v[0] = v0
+
+# --- Time Integration using Euler method ---
+for i in range(1, steps):
+    F = q * (E + np.cross(v[i-1], B))
+    a = F / m
+    v[i] = v[i-1] + a * dt
+    r[i] = r[i-1] + v[i] * dt
+
+# --- Plotting the 3D trajectory ---
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.plot(r[:, 0], r[:, 1], r[:, 2], color='red', linewidth=1)
+ax.set_title('Charged Particle Trajectory under Electric and Magnetic Fields', fontsize=14)
+ax.set_xlabel('x (m)')
+ax.set_ylabel('y (m)')
+ax.set_zlabel('z (m)')
+plt.tight_layout()
+plt.show()
+</code></pre>
+<h2 id="_1"><img alt="alt text" src="../image-2.png"/></h2>
+<h3 id="5-analysis-of-the-result"><strong>5. Analysis of the Result</strong></h3>
+<p>Depending on the configuration of the fields:</p>
+<ul>
+<li><strong>Only magnetic field</strong> ⇒ Circular or helical motion.</li>
+<li><strong>Only electric field</strong> ⇒ Linear acceleration.</li>
+<li><strong>Crossed fields</strong> ⇒ Drift in the perpendicular direction (e.g., <strong>E × B drift</strong>).</li>
+</ul>
+<p>This simulation demonstrates a <strong>helical path</strong>: the electric field causes linear acceleration along the <span class="arithmatex">\(z\)</span>-axis, while the magnetic field forces the particle into circular motion in the <span class="arithmatex">\(x\)</span>-<span class="arithmatex">\(y\)</span> plane.</p>
+<hr/>
+<h3 id="6-adding-visualization-as-a-gif-bonus"><strong>6. Adding Visualization as a GIF (Bonus)</strong></h3>
+<p>Colab'ta çalıştırmak için:</p>
+<pre><code class="language-python">import matplotlib.animation as animation
+
+fig = plt.figure(figsize=(6, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+def update(num):
+    ax.clear()
+    ax.plot(r[:num, 0], r[:num, 1], r[:num, 2], color='purple')
+    ax.set_xlim([np.min(r[:, 0]), np.max(r[:, 0])])
+    ax.set_ylim([np.min(r[:, 1]), np.max(r[:, 1])])
+    ax.set_zlim([np.min(r[:, 2]), np.max(r[:, 2])])
+    ax.set_title(f'Time step: {num}')
+    ax.set_xlabel('x (m)')
+    ax.set_ylabel('y (m)')
+    ax.set_zlabel('z (m)')
+
+ani = animation.FuncAnimation(fig, update, frames=range(0, steps, 50), interval=20)
+
+from IPython.display import HTML
+HTML(ani.to_jshtml())
+</code></pre>
+<p><img alt="alt text" src="../physichs.gif"/>
+<img alt="alt text" src="../image-3.png"/>
+<img alt="alt text" src="../image-4.png"/> </p>
+<p><img alt="alt text" src="../physichs-1.gif"/>
+<img alt="alt text" src="../physichs-2.gif"/></p>
+<hr/>
+<h3 id="7-real-world-applications"><strong>7. Real-World Applications</strong></h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Use of Lorentz Force</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cyclotron</td>
+<td>Accelerates particles in a circular path</td>
+</tr>
+<tr>
+<td>Mass Spectrometer</td>
+<td>Sorts particles by charge/mass ratio</td>
+</tr>
+<tr>
+<td>Tokamak Fusion Core</td>
+<td>Confinement of hot plasma using <span class="arithmatex">\(B\)</span> field</td>
+</tr>
+<tr>
+<td>Van Allen Belts</td>
+<td>Trapping of solar wind particles around Earth</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="8-further-enhancements"><strong>8. Further Enhancements</strong></h3>
+<ul>
+<li>Add <strong>non-uniform fields</strong>.</li>
+<li>Use <strong>Runge-Kutta</strong> for higher accuracy.</li>
+<li>Simulate <strong>relativistic speeds</strong>.</li>
+<li>Introduce <strong>collisions or damping</strong>.</li>
+</ul>
+<hr/>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
