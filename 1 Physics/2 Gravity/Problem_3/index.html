@@ -325,7 +325,6 @@ v^2 = GM \left( \frac{2}{r} - \frac{1}{a} \right)
 <li>Calculating required delta-v for maneuvers</li>
 <li>Designing gravity assist paths and escape strategies</li>
 </ul>
-<p><img alt="alt text" src="../image-29.png"/></p>
 <h1 id="trajectories-of-a-freely-released-payload-near-earth_1">Trajectories of a Freely Released Payload Near Earth</h1>
 <p>This document presents a numerical approach to simulate and compute the trajectory of a freely released payload near Earth. The analysis assumes a vacuum environment (no air resistance), and the only force acting on the payload is Earth's gravitational pull.</p>
 <h2 id="1-physical-model">1. Physical Model</h2>
@@ -348,7 +347,6 @@ v^2 = GM \left( \frac{2}{r} - \frac{1}{a} \right)
 - Initial velocity: <span class="arithmatex">\( \vec{v}_0 = [v_{x0}, v_{y0}] \)</span>
 - Altitude: <span class="arithmatex">\( h \)</span>, such that <span class="arithmatex">\( r_0 = R_{\oplus} + h \)</span></p>
 <p>Here, <span class="arithmatex">\( R_{\oplus} \)</span> is Earth's radius.</p>
-<p><img alt="alt text" src="../image-30.png"/></p>
 <h2 id="3-numerical-integration">3. Numerical Integration</h2>
 <p>We use the <strong>4th-order Runge-Kutta method</strong> (RK4) to integrate the system of ordinary differential equations:</p>
 <div class="arithmatex">\[
@@ -360,7 +358,6 @@ v^2 = GM \left( \frac{2}{r} - \frac{1}{a} \right)
 <p>At each time step <span class="arithmatex">\( t \)</span>, update <span class="arithmatex">\( \vec{r}(t) \)</span> and <span class="arithmatex">\( \vec{v}(t) \)</span> using RK4.</p>
 <h2 id="5-visualization">5. Visualization</h2>
 <p>After integrating over time, the trajectory <span class="arithmatex">\( \vec{r}(t) \)</span> can be plotted to visualize the orbit or impact trajectory.</p>
-<p><img alt="alt text" src="../image-31.png"/></p>
 <h1 id="trajectories-of-a-freely-released-payload-near-earth_2">Trajectories of a Freely Released Payload Near Earth</h1>
 <p>The paths followed by a payload released near Earth vary based on its <strong>initial velocity</strong> and <strong>altitude</strong>. These trajectories determine whether the payload:</p>
 <ul>
@@ -389,7 +386,6 @@ E = \frac{1}{2}mv^2 - \frac{G M m}{r} &lt; 0
 <li>The payload may <strong>impact Earth</strong>,</li>
 <li>Or <strong>reenter the atmosphere</strong>, depending on its altitude.</li>
 </ul>
-<p><img alt="alt text" src="../image-32.png"/></p>
 <h2 id="3-escape-trajectory">3. Escape Trajectory</h2>
 <p>If the velocity exceeds the <strong>escape velocity</strong>:</p>
 <div class="arithmatex">\[
@@ -432,10 +428,8 @@ E = \frac{1}{2}mv^2 - \frac{G M m}{r} \geq 0
 </tr>
 </tbody>
 </table>
-<p><img alt="alt text" src="../image-34.png"/></p>
 <h2 id="conclusion">Conclusion</h2>
 <p>The fate of a freely released payload depends critically on its initial conditions. By controlling the magnitude and direction of its initial velocity, mission planners can achieve different outcomes: safe orbit, controlled reentry, or interplanetary escape.</p>
-<p><img alt="alt text" src="../image-33.png"/></p>
 <h2 id="trajectories-of-a-freely-released-payload-near-earth_3">Trajectories of a Freely Released Payload Near Earth</h2>
 <p>This tool simulates and visualizes payload trajectories under Earth’s gravity using initial velocity magnitude and direction.</p>
 <h3 id="governing-equations">Governing Equations</h3>
@@ -457,9 +451,24 @@ v_{\text{orbital}} = \sqrt{\frac{G M}{r}}
 <ul>
 <li>Escape velocity:</li>
 </ul>
-<div class="arithmatex">\[
+<p>$$
 v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
-\]</div>
+$$
+<img alt="alt text" src="../image-37.png"/></p>
+<p><img alt="alt text" src="../image-38.png"/> </p>
+<p><img alt="alt text" src="../image-39.png"/></p>
+<p><img alt="alt text" src="../image-40.png"/> </p>
+<p><img alt="alt text" src="../image-41.png"/></p>
+<p><img alt="alt text" src="../image-42.png"/></p>
+<p><img alt="alt text" src="../image-43.png"/></p>
+<p><img alt="alt text" src="../image-44.png"/></p>
+<p><img alt="alt text" src="../image-45.png"/> </p>
+<p><img alt="alt text" src="../image-46.png"/></p>
+<p><img alt="alt text" src="../image-47.png"/></p>
+<p><img alt="alt text" src="../image-48.png"/></p>
+<p><img alt="alt text" src="../image-49.png"/></p>
+<p><img alt="alt text" src="../physichs.gif"/></p>
+<p><img alt="alt text" src="../physichs-1.gif"/></p>
 <p><img alt="alt text" src="../image-36.png"/></p>
 <p><img alt="alt text" src="../image-35.png"/></p>
 </div>
