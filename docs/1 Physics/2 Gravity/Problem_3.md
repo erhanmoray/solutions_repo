@@ -142,7 +142,7 @@ Understanding these trajectories is vital for:
 - Calculating required delta-v for maneuvers
 - Designing gravity assist paths and escape strategies
 
-![alt text](image-29.png)
+
 
 # Trajectories of a Freely Released Payload Near Earth
 
@@ -177,7 +177,7 @@ Let the initial conditions be defined as:
 
 Here, \( R_{\oplus} \) is Earth's radius.
 
-![alt text](image-30.png)
+
 
 ## 3. Numerical Integration
 
@@ -198,7 +198,7 @@ At each time step \( t \), update \( \vec{r}(t) \) and \( \vec{v}(t) \) using RK
 
 After integrating over time, the trajectory \( \vec{r}(t) \) can be plotted to visualize the orbit or impact trajectory.
 
-![alt text](image-31.png)
+
 
 # Trajectories of a Freely Released Payload Near Earth
 
@@ -239,7 +239,7 @@ But unlike a stable orbit, the trajectory intersects Earth's surface (if we igno
 - The payload may **impact Earth**,
 - Or **reenter the atmosphere**, depending on its altitude.
 
-![alt text](image-32.png)
+
 
 ## 3. Escape Trajectory
 
@@ -267,13 +267,12 @@ This results in a **hyperbolic trajectory**.
 | \( v \approx v_{\text{orbital}} \) | Sufficient for orbit                     | Elliptical orbit      | Orbital insertion             |
 | \( v \geq v_{\text{escape}} \)   | High velocity                             | Hyperbolic / escape   | Leaves Earth's gravity        |
 
-![alt text](image-34.png)
+
 
 ## Conclusion
 
 The fate of a freely released payload depends critically on its initial conditions. By controlling the magnitude and direction of its initial velocity, mission planners can achieve different outcomes: safe orbit, controlled reentry, or interplanetary escape.
 
-![alt text](image-33.png)
 
 ## Trajectories of a Freely Released Payload Near Earth
 
@@ -306,6 +305,35 @@ $$
 $$
 v_{\text{escape}} = \sqrt{\frac{2 G M}{r}}
 $$
+![alt text](image-37.png)
+
+![alt text](image-38.png) 
+
+![alt text](image-39.png)
+
+![alt text](image-40.png) 
+
+![alt text](image-41.png)
+
+![alt text](image-42.png)
+
+![alt text](image-43.png)
+
+![alt text](image-44.png)
+
+![alt text](image-45.png) 
+
+![alt text](image-46.png)
+
+![alt text](image-47.png)
+
+![alt text](image-48.png)
+
+![alt text](image-49.png)
+
+![alt text](physichs.gif)
+
+![alt text](physichs-1.gif)
 
 ![alt text](image-36.png)
 

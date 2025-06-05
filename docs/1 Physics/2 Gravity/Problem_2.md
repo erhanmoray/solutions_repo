@@ -257,10 +257,3 @@ Understanding these velocities is **fundamental** for mission planning:
  
 ---
  
-*Next: We will compute and visualize these velocities using real planetary data.*
- 
-![alt text](image-28.png)
- 
-"""
-Here’s a comparison of the first and second cosmic velocities for Earth, Mars, and Jupiter. You can clearly see how much more energy is needed to escape the gravitational pull of a massive planet like Jupiter compared to Mars or Earth.
-"""
